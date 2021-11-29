@@ -1,0 +1,26 @@
+import java.util.Arrays;
+import java.util.List;
+
+public class Solution {
+
+	public static void main(String[] args) {
+
+		List<Student> students = Arrays.asList(new Student(1, "Shiva", 60.0, 15), new Student(1, "Ravi", 75.0, 16),
+				new Student(1, "Vikram", 80.0, 16), new Student(1, "Rohit", 55.0, 14));
+
+		double findMarks = 75.0;
+		searchStudentByMarks(students, findMarks);
+		findStudentWithMaximumAge();
+	}
+
+	private static Student searchStudentByMarks(List<Student> students, double findMarks) {
+
+		for (Student student : students) {
+			if (student.getMarks() == findMarks) {
+
+			}
+		}
+		return null;
+	}
+
+}

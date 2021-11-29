@@ -1,0 +1,81 @@
+package com.student.entity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Address {
+
+	private Integer addressId;
+	private String plotNo;
+	private String location;
+	private String city;
+	private String state;
+	private String country;
+
+	public Integer getAddressId() {
+		return addressId;
+	}
+
+	public void setAddressId(Integer addressId) {
+		this.addressId = addressId;
+	}
+
+	public String getPlotNo() {
+		return plotNo;
+	}
+
+	public void setPlotNo(String plotNo) {
+		this.plotNo = plotNo;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public Address(Integer addressId, String plotNo, String location, String city, String state, String country) {
+		this.addressId = addressId;
+		this.plotNo = plotNo;
+		this.location = location;
+		this.city = city;
+		this.state = state;
+		this.country = country;
+	}
+
+	public Address() {
+	}
+
+	@Override
+	public String toString() {
+		return "Address [addressId=" + addressId + ", plotNo=" + plotNo + ", location=" + location + ", city=" + city
+				+ ", state=" + state + ", country=" + country + "]";
+	}
+
+}
