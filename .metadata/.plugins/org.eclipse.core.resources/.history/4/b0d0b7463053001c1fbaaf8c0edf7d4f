@@ -1,0 +1,15 @@
+package com.student.entity;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+
+@Entity
+public class College {
+	
+	private Integer collegeId;
+	private String collegeName;
+	private String collegeAddress;
+	
+	private List<Student> students;
+}
