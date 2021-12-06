@@ -41,8 +41,7 @@ public class Student {
 	private College college;
 
 	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "student_course", joinColumns = { @JoinColumn(name = "student_id") }, inverseJoinColumns = {
-			@JoinColumn(name = "courseId") })
+	@JoinTable(name = "student_course", joinColumns= {@JoinCoumn(name="student_id")} ,inverseJoinColumns = {})
 	private List<Courses> courses;
 
 	public College getCollege() {
@@ -110,7 +109,7 @@ public class Student {
 	}
 
 	public Student(Integer studentId, String studentName, String mobileNumber, String address, String loginId,
-			String password, Address studentAddress, College college, List<Courses> courses) {
+			String password, Address studentAddress) {
 		this.studentId = studentId;
 		this.studentName = studentName;
 		this.mobileNumber = mobileNumber;
@@ -118,16 +117,6 @@ public class Student {
 		this.loginId = loginId;
 		this.password = password;
 		this.studentAddress = studentAddress;
-		this.college = college;
-		this.courses = courses;
-	}
-
-	public List<Courses> getCourses() {
-		return courses;
-	}
-
-	public void setCourses(List<Courses> courses) {
-		this.courses = courses;
 	}
 
 	public Student() {
@@ -137,7 +126,7 @@ public class Student {
 	public String toString() {
 		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", mobileNumber=" + mobileNumber
 				+ ", address=" + address + ", loginId=" + loginId + ", password=" + password + ", studentAddress="
-				+ studentAddress + ", college=" + college + ", courses=" + courses + "]";
+				+ studentAddress + "]";
 	}
 
 }

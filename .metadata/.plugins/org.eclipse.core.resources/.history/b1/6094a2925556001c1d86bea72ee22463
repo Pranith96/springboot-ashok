@@ -111,6 +111,7 @@ public class Student {
 
 	public Student(Integer studentId, String studentName, String mobileNumber, String address, String loginId,
 			String password, Address studentAddress, College college, List<Courses> courses) {
+		super();
 		this.studentId = studentId;
 		this.studentName = studentName;
 		this.mobileNumber = mobileNumber;
@@ -137,7 +138,7 @@ public class Student {
 	public String toString() {
 		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", mobileNumber=" + mobileNumber
 				+ ", address=" + address + ", loginId=" + loginId + ", password=" + password + ", studentAddress="
-				+ studentAddress + ", college=" + college + ", courses=" + courses + "]";
+				+ studentAddress + "]";
 	}
 
 }
